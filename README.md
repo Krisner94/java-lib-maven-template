@@ -16,6 +16,56 @@ This is a template for creating a Java library with Maven. It includes a basic p
 
 To use this template, click the "Use this template" button on the GitHub repository page. This will create a new repository in your account with the same structure and files.
 
+After creating the repository, you need to perform the following steps:
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
+    ```
+
+2.  **Update the `pom.xml` file:**
+
+    Open the `pom.xml` file and replace the following placeholders with your project's information:
+
+    *   `${group-id}`: The group ID of your project (e.g., `com.yourcompany`).
+    *   `${artifact-id}`: The artifact ID of your project (e.g., `my-awesome-library`).
+    *   `<url>`: The URL of your project's GitHub repository.
+    *   `<developer>`: Your name and email address.
+    *   `<scm>`: The SCM (Source Code Management) information for your project.
+
+3.  **Rename the root package:**
+
+    The root package of the project is `com.example.lib`. You should rename it to match your project's group ID and artifact ID. For example, if your group ID is `com.mycompany` and your artifact ID is `mylibrary`, you should rename the package to `com.mycompany.mylibrary`.
+
+    You can do this in your IDE or with the following commands:
+
+    ```bash
+    # Rename main package
+    mkdir -p src/main/java/com/mycompany/mylibrary
+    mv src/main/java/com/example/lib/* src/main/java/com/mycompany/mylibrary/
+    rm -rf src/main/java/com/example
+
+    # Rename test package
+    mkdir -p src/test/java/com/mycompany/mylibrary
+    mv src/test/java/com/example/lib/* src/test/java/com/mycompany/mylibrary/
+    rm -rf src/test/java/com/example
+    ```
+
+4.  **Update the package name in the source files:**
+
+    After renaming the packages, you need to update the package declarations in the Java source files.
+
+5.  **Commit and push the changes:**
+
+    ```bash
+    git add .
+    git commit -m "Initial project setup"
+    git push origin main
+    ```
+
+
 ## Building and Testing
 
 To build the project, run:
