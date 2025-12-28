@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ExampleLibTest {
     @Test
-    void testHello() {
-        assertEquals("hello", ExampleLib.hello());
+    void testGetGreeting() {
+        ExampleLib exampleLib = new ExampleLib();
+        assertEquals("Hello World!", exampleLib.getGreeting());
     }
 }
